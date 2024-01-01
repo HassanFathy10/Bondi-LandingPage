@@ -1,0 +1,209 @@
+:root {
+    --dark-color: #19283f;
+    --green-color: #00c7c0;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --numbers-color: #94808025;
+    --section-color: #eff7fa;
+}
+* {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+.main-btn {
+    background-color: var(--red-color) !important;
+    color: var(--yellow-color) !important;
+    padding: 0.5rem 1rem !important;
+}
+.main-btn:hover {
+    color: var(--dark-color) !important;
+}
+.btn-primary:hover {
+    color: var(--dark-color) !important;
+}
+
+/* Start navbar */
+.navbar {
+    background-color: var(--dark-color);
+}
+a.nav-link{
+    color: #82929e;
+}
+a.nav-link.active,
+a.nav-link:focus,
+a.nav-link:hover {
+    color: var(--green-color) !important;
+}
+.search {
+    border-left: 1px solid var(--green-color);
+    color: var(--green-color);
+    cursor: pointer;
+}
+.navbar .navbar-toggler {
+    color: var(--green-color);
+    border-color: white;
+    font-size: 25px;
+}
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: var(--green-color);
+}
+/* End navbar */
+
+/* Start landing section */
+.landing {
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 70px);
+}
+/* End landing section */
+
+/* Start services section */
+.services {
+    background-color: var(--section-color);
+}
+.main-title::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.services .icon-holder {
+    height: 200px;
+}
+.services .icon-holder svg{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.services .number {
+    color: var(--numbers-color);
+    font-size: 12rem;
+}
+.services .icon {
+    color: var(--green-color);
+    font-size: 6rem;
+}
+.services h4 {
+    color: var(--yellow-color);
+}
+/* End services section */
+
+/* Start portfolio section */
+.portfolio {
+    background-color: var(--section-color);
+}
+.portfolio .active {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    border-radius: 1rem;
+}
+.portfolio span {
+    padding: 0.6rem;
+    cursor: pointer;
+}
+.portfolio span:not(.active):hover {
+    color: var(--yellow-color);
+}
+.portfolio .box {
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.portfolio .box::before {
+    content: attr(data-work);
+    color: var(--dark-color);
+    position: absolute;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: #00c7c0e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: 0.3s;
+    transform: translateX(calc(-100% - 5px));
+    cursor: pointer;
+}
+.portfolio .box:hover::before {
+    transform: translateX(0);
+}
+/* End portfolio section */
+
+/* Start About section */
+.about {
+    background-color: white;
+}
+/* End About section */
+
+/* Start Contact section */
+.contact {
+    background-color: var(--section-color);
+}
+.contact .title {
+    color: var(--yellow-color);
+}
+.contact .card {
+    background-color: var(--green-color);
+}
+/* End Contact section */
+
+/* Start work section */
+.work {
+    background-color: var(--dark-color);
+}
+/* End work section */
+
+/* Start story section */
+.story {
+    background-color: white;
+} 
+.story .container .card {
+    background-color: var(--section-color);
+}
+/* End story section */
+
+/* Start subscribe section */
+.subscribe {
+    background-color: var(--yellow-color);
+}
+.subscribe input {
+    background-color: var(--yellow-color);
+    border-bottom: 1px solid white !important;
+}
+.subscribe input:focus {
+    outline: none;
+}
+.subscribe ::placeholder {
+    color: white;
+}
+.subscribe a {
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+.subscribe a:hover{
+    background-color: var(--red-color);
+}
+/* End subscribe section */
+
+/* Start footer section */
+.footer {
+    background-color: var(--dark-color);
+}
+.footer a{
+    text-decoration: none;
+}
+/* End footer section */
+
+/* media query */
+@media screen and (max-width: 320px) {
+    body {
+        font-size: small !important;
+    }
+}
